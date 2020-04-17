@@ -21,4 +21,9 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientsAdded.emit(this.ingredients.slice());
   }
+
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    this.ingredientsAdded.emit(this.ingredients.slice());
+  }
 }
